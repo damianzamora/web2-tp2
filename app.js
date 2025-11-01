@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express();
 
-//const teams_routes = require('./routes/teams.routes')
+const leagues_routes = require('./routes/league.routes')
 
 app.use(express.json()) 
 
-//app.use("/api", [teams_routes]) 
+app.use("/api", [leagues_routes]) 
 
 module.exports = app; 
