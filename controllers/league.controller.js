@@ -1,5 +1,7 @@
 const League = require ('../models/league.model')
 
+
+//GET all
 async function getLeagues(req, res){
     try {
         const leagues = await League.find()
@@ -18,7 +20,36 @@ async function getLeagues(req, res){
     }
 }
 
-async function postLeague(req, res){
+//GET by ID
+async function getLeagueById(req, res){
+    try {
+        const id = req.params.id
+        const getLeague = await League.findById(id)
+
+        if(!getLeague){
+            return res.status(404).send({
+            ok:false,
+            message:"No se encontró la liga"
+        })
+        }
+
+        res.status(200).send({
+            ok:true,
+            message: "Liga encontrada",
+            leagues
+        })
+
+    } catch (error) {
+        console.log(error)
+        res.status(500).send({
+            ok:false,
+            message: "Error al traer liga"
+        })
+    }
+}
+
+// POST league
+async function createLeague(req, res){
     try {
         const league = new League(req.body)
         const newLeague = await league.save()
@@ -29,6 +60,7 @@ async function postLeague(req, res){
     }
 }
 
+// DELETE leage
 async function deleteLeague(req,res){
 
     try {
@@ -55,11 +87,35 @@ async function deleteLeague(req,res){
             message: "Hubo un error al eliminar la liga"
         })
     }
+}
 
+//UPDATE league
+async function updateLeague(req, res){
+    try {
+        const id = req.params.id
+        const updateLeague = await League.findByIdAndUpdate(id, req.body, { new: true })
+        if(!updateLeague){            
+            return res.status(404).send({
+                ok:false,
+                message: "No se encontro la liga para actualizar"
+            })
+        }
+            res.status(200).send({
+            ok:true,
+            message: "Se actualizó la liga exitosamente",
+            updateLeague
+        })
+        
+    } catch (error) {
+        res.status(500).send("Error al actualizar liga")
+        console.log(error)
+    }
 }
 
 module.exports = {
     getLeagues,
-    postLeague,
-    deleteLeague
+    getLeagueById,
+    createLeague,
+    deleteLeague,
+    updateLeague
 }
