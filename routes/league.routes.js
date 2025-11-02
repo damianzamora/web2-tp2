@@ -9,4 +9,7 @@ router.get("/leagues", leagueController.getLeagues)
 //POST league
 router.post("/league", leagueController.postLeague)
 
+//DELETE league
+router.delete("/league/:id", leagueController.deleteLeague)
+
 module.exports = router;
