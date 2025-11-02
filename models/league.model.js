@@ -21,13 +21,12 @@ const leagueSchema = new Schema({
         required: true,
         trim: true /* Evitamos espacios en principio y final */
     },
-    openingDate: {
-        type:Date
-    },
-    
+    openingDate: Date ,    
     participantNumber: {
-        type: Number
-    }
+        type: Number,
+        required: true 
+}}, {
+  versionKey: false // ocultar parametro "__v" globalmente
 })
 
 module.exports = mongoose.model("League", leagueSchema)
