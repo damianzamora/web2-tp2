@@ -12,19 +12,29 @@ Postman (para pruebas de endpoints)
 🚀 Funciones principales (CRUD)
 Método	Endpoint	Descripción
 GET	-> /api/leagues	- Obtiene todas las ligas almacenadas
+
 GET	->/api/league/:id	- Obtiene una liga específica por su ID
+
 POST ->	/api/league	- Crea una nueva liga
+
 PUT	-> /api/league/:id	- Actualiza una liga existente
+
 DELETE ->	/api/league/:id	- Elimina una liga por ID
 
 🧩 Estructura del modelo League
 {
   name: String,          // Nombre de la liga (obligatorio, 3–40 caracteres)
+  
   sport: String,         // Tipo de deporte (obligatorio, debe ser uno de los valores permitidos)
+  
   country: String,       // País de la liga (obligatorio)
+  
   openingDate: Date,     // Fecha de inicio (opcional)
+  
   participantNumber: Number, // Número de participantes (obligatorio)
+  
   createdAt: Date,       // Fecha de creación (automática)
+  
   updatedAt: Date        // Fecha de última actualización (automática)
 }
 
