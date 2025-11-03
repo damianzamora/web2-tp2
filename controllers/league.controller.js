@@ -1,7 +1,7 @@
 const League = require ('../models/league.model')
 
 
-//GET all
+//GET all leagues
 async function getLeagues(req, res){
     try {
         const leagues = await League.find()
@@ -20,7 +20,7 @@ async function getLeagues(req, res){
     }
 }
 
-//GET by ID
+//GET league by ID
 async function getLeagueById(req, res){
     try {
         const id = req.params.id
@@ -55,12 +55,19 @@ async function createLeague(req, res){
         const newLeague = await league.save()
         res.status(201).send(newLeague)
     } catch (error) {
+        if (error.name === 'ValidationError') {
+            const errors = Object.values(error.errors).map(e => e.message);
+            return res.status(400).json({
+                message: 'Error de validación',
+                errors: errors
+            });
+        }
         res.status(500).send("Error al crear liga")
         console.log(error)
     }
 }
 
-// DELETE leage
+// DELETE league
 async function deleteLeague(req,res){
 
     try {
