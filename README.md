@@ -66,9 +66,17 @@ Elimina una liga según su ID. Si no se encuentra, devuelve un error 404.
 
 🧪 Uso del sistema
 
-Se debe correr el comando 'node index.js' el cual levantará el programa en el puerto 3000.
-Una vez levantado se puede correr las colecciones de postman que estan incluidas en el archivo
-'postman_collection.json'
+a) git clone https://github.com/damianzamora/web2-tp2.git
+
+b) Crear archivo .env con la siguiente informacion
+
+SERVER_PORT = 3000
+MONGO_URL = "mongodb+srv://damizamora_db_user:7A8c8ZOxSL1kH5Ab@clusterweb2.dm52k6r.mongodb.net/?appName=ClusterWeb2"
+
+c) Abrir terminal y ejecutar node index.js, esto levantará el sistema en puerto 3000.
+
+d) Ejecutar colecciones de postman ubicadas en 'postman_collection.json' , en postman se puede importar.
+
 
 
 
