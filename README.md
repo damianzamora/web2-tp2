@@ -13,9 +13,13 @@ Postman (para pruebas de endpoints)
 Método	Endpoint	Descripción
 
 🔹GET	-> /api/leagues	- Obtiene todas las ligas almacenadas
+
 🔹GET	->/api/league/:id	- Obtiene una liga específica por su ID
+
 🔹POST ->	/api/league	- Crea una nueva liga
+
 🔹PUT	-> /api/league/:id	- Actualiza una liga existente
+
 🔹DELETE ->	/api/league/:id	- Elimina una liga por ID
 
 🧩 Estructura del modelo League
