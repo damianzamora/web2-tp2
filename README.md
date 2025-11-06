@@ -9,15 +9,14 @@ Express
 Mongoose (MongoDB)
 Postman (para pruebas de endpoints)
 
-
-
 🚀 Funciones principales (CRUD)
 Método	Endpoint	Descripción
-GET	-> /api/leagues	- Obtiene todas las ligas almacenadas
-GET	->/api/league/:id	- Obtiene una liga específica por su ID
-POST ->	/api/league	- Crea una nueva liga
-PUT	-> /api/league/:id	- Actualiza una liga existente
-DELETE ->	/api/league/:id	- Elimina una liga por ID
+
+🔹GET	-> /api/leagues	- Obtiene todas las ligas almacenadas
+🔹GET	->/api/league/:id	- Obtiene una liga específica por su ID
+🔹POST ->	/api/league	- Crea una nueva liga
+🔹PUT	-> /api/league/:id	- Actualiza una liga existente
+🔹DELETE ->	/api/league/:id	- Elimina una liga por ID
 
 🧩 Estructura del modelo League
 {
@@ -58,11 +57,11 @@ Actualiza una liga existente. Si el ID no existe, devuelve un error 404.
 🔹 deleteLeague
 Elimina una liga según su ID. Si no se encuentra, devuelve un error 404.
 
-
-
 🧪 Uso del sistema
 
 Se debe correr el comando 'node index.js' el cual levantará el programa en el puerto 3000.
 Una vez levantado se puede correr las colecciones de postman que estan incluidas en el archivo
 'postman_collection.json'
+
+
 
