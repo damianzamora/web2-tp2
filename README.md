@@ -71,6 +71,7 @@ a) git clone https://github.com/damianzamora/web2-tp2.git
 b) Crear archivo .env con la siguiente informacion
 
 SERVER_PORT = 3000
+
 MONGO_URL = "mongodb+srv://damizamora_db_user:7A8c8ZOxSL1kH5Ab@clusterweb2.dm52k6r.mongodb.net/?appName=ClusterWeb2"
 
 c) Abrir terminal y ejecutar node index.js, esto levantará el sistema en puerto 3000.
