@@ -4,10 +4,13 @@ Este proyecto implementa una API RESTful para gestionar ligas deportivas, permit
 
 ⚙️ Tecnologías utilizadas
 
-Node.js
-Express
-Mongoose (MongoDB)
-Postman (para pruebas de endpoints)
+🔹Node.js
+
+🔹Express
+
+🔹Mongoose (MongoDB)
+
+🔹Postman (para pruebas de endpoints)
 
 🚀 Funciones principales (CRUD)
 Método	Endpoint	Descripción
@@ -24,19 +27,19 @@ Método	Endpoint	Descripción
 
 🧩 Estructura del modelo League
 {
-  name: String,          // Nombre de la liga (obligatorio, 3–40 caracteres)
+🔹 name: String,          // Nombre de la liga (obligatorio, 3–40 caracteres)
   
-  sport: String,         // Tipo de deporte (obligatorio, debe ser uno de los valores permitidos)
+🔹sport: String,         // Tipo de deporte (obligatorio, [football, basketball, nfl])
   
-  country: String,       // País de la liga (obligatorio)
+🔹 country: String,       // País de la liga (obligatorio)
   
-  openingDate: Date,     // Fecha de inicio (opcional)
+🔹openingDate: Date,     // Fecha de inicio (opcional)
   
-  participantNumber: Number, // Número de participantes (obligatorio)
+🔹participantNumber: Number, // Número de participantes (obligatorio)
   
-  createdAt: Date,       // Fecha de creación (automática)
+🔹 createdAt: Date,       // Fecha de creación (automática)
   
-  updatedAt: Date        // Fecha de última actualización (automática)
+🔹  updatedAt: Date        // Fecha de última actualización (automática)
 }
 
 
