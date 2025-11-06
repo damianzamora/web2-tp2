@@ -72,7 +72,7 @@ b) Crear archivo .env con la siguiente informacion
 
 SERVER_PORT = 3000
 
-MONGO_URL = "mongodb+srv://damizamora_db_user:7A8c8ZOxSL1kH5Ab@clusterweb2.dm52k6r.mongodb.net/?appName=ClusterWeb2"
+MONGO_URL = Se envía URL via mail
 
 c) Instalar dependencias
 
