@@ -64,7 +64,7 @@ Actualiza una liga existente. Si el ID no existe, devuelve un error 404.
 🔹 deleteLeague
 Elimina una liga según su ID. Si no se encuentra, devuelve un error 404.
 
-🧪 Uso del sistema
+🧪 Instalación, configuración y uso de sistema.
 
 a) git clone https://github.com/damianzamora/web2-tp2.git
 
@@ -74,9 +74,17 @@ SERVER_PORT = 3000
 
 MONGO_URL = "mongodb+srv://damizamora_db_user:7A8c8ZOxSL1kH5Ab@clusterweb2.dm52k6r.mongodb.net/?appName=ClusterWeb2"
 
-c) Abrir terminal y ejecutar node index.js, esto levantará el sistema en puerto 3000.
+c) Instalar dependencias
 
-d) Ejecutar colecciones de postman ubicadas en 'postman_collection.json' , en postman se puede importar.
+npm install ( crea package.json y package-lock.json)
+
+npm install express
+
+npm install mongoose
+
+d) Abrir terminal y ejecutar node index.js, esto levantará el sistema en puerto 3000.
+
+e) Ejecutar colecciones de postman ubicadas en 'postman_collection.json' , en postman se puede importar.
 
 
 
