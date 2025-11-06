@@ -36,7 +36,7 @@ async function getLeagueById(req, res){
         res.status(200).send({
             ok:true,
             message: "Liga encontrada",
-            leagues
+            getLeague
         })
 
     } catch (error) {
